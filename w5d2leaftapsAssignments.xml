@@ -1,0 +1,21 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE suite SYSTEM "https://testng.org/testng-1.0.dtd">
+<suite parallel="classes" name="Suite">
+<parameter name="url" value="http://leaftaps.com/opentaps/control/main"></parameter>
+ <parameter name="username" value="DemoCsr"></parameter>
+<parameter name="password" value="crmsfa"></parameter>
+<parameter name="cname" value="testleaf"/>
+<parameter name="fname" value="keerthana"/>
+<parameter name="lname" value="Muthukumar"/>
+<parameter name="loc" value="keerthy"/>
+<parameter name="dep" value="testing"/>
+<parameter name="des" value="learn selenium"/>
+<parameter name="email" value="abc@gmail.com"/>
+<parameter name="province" value="New York"/>
+  <test thread-count="5" parallel="classes" name="Test">
+    <classes>
+      <class name="w5d2leaftapsAssignments.CreateLeadDynamic"/>
+      <class name="w5d2leaftapsAssignments.EditLeadStatic"/>
+    </classes>
+  </test> <!-- Test -->
+</suite> <!-- Suite -->

@@ -1,0 +1,24 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE suite SYSTEM "https://testng.org/testng-1.0.dtd">
+<suite parallel="tests" name="Suite" verbose="5">
+<parameter name="url" value="https://dev123162.service-now.com"/>
+ <parameter name="user" value="admin"/>
+<parameter name="password" value="Tester@0608"/>
+<parameter name="num" value="INC0010007"/>
+  <test thread-count="5" parallel="classes" name="Test">
+    <classes>
+      <class name="w5d2servicenowAssignments.NewProposal"/>
+      <class name="w5d2servicenowAssignments.NewCaller"/>
+      <class name="w5d2servicenowAssignments.NewArticle"/>
+     
+    </classes>
+    </test>
+    <test thread-count="5" parallel="tests" name="Test1">
+    <classes>
+     <class name="w5d2servicenowAssignments.NewIncident"/>
+     <class name="w5d2servicenowAssignments.UpdateIncident"/>
+     <class name="w5d2servicenowAssignments.DeleteIncident"/>
+   </classes> 
+  </test> <!-- Test -->
+  
+</suite> <!-- Suite -->
